@@ -25,6 +25,8 @@ class ArticleTypeController extends AdminController
     protected function grid()
     {
         $grid = new Grid(new ArticleType());
+        $grid ->column('title',__('Title'));
+        $grid->column('id', __('ID'));
 
 
 
@@ -54,7 +56,10 @@ class ArticleTypeController extends AdminController
     protected function form()
     {
         $form = new Form(new ArticleType());
-        $form->text('title');
+        $form->select('parent_id')->options((new ArticleType())::selectOptions());
+        $form->text('title')->required();
+        $form->number('order')->default(0);
+
 
 
         return $form;

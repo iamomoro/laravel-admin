@@ -1,2 +1,3 @@
 11.30 config files
+46.52 View on Dashboard and create drag&drop effect
 https://www.youtube.com/watch?v=sybdQGh6nAc&list=RDCMUC8aiILPy0NO5wwLaYEzImbw&start_radio=1
