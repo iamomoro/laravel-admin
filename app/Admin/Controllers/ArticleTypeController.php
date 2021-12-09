@@ -15,7 +15,7 @@ class ArticleTypeController extends AdminController
      *
      * @var string
      */
-    protected $title = 'ArticleType';
+    protected $title = 'Article Type';
 
     /**
      * Make a grid builder.
@@ -54,7 +54,7 @@ class ArticleTypeController extends AdminController
     protected function form()
     {
         $form = new Form(new ArticleType());
-
+        $form->text('title');
 
 
         return $form;
