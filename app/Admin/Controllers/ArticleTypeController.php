@@ -37,6 +37,7 @@ class ArticleTypeController extends AdminController
 
     public function index(Content $content){
         $tree = new Tree(new ArticleType);
+        return $content->header('Article Category')->body($tree);
     }
 
     /**
