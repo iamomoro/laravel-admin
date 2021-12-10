@@ -7,6 +7,8 @@ use Encore\Admin\Controllers\AdminController;
 use Encore\Admin\Form;
 use Encore\Admin\Grid;
 use Encore\Admin\Show;
+use Encore\Admin\Layout\Content;
+use Encore\Admin\Tree;
 
 class ArticleTypeController extends AdminController
 {
@@ -22,15 +24,19 @@ class ArticleTypeController extends AdminController
      *
      * @return Grid
      */
-    protected function grid()
-    {
-        $grid = new Grid(new ArticleType());
-        $grid ->column('title',__('Title'));
-        $grid->column('id', __('ID'));
+    // protected function grid()
+    // {
+    //     $grid = new Grid(new ArticleType());
+    //     $grid ->column('title',__('Title'));
+    //     $grid->column('id', __('ID'));
 
 
 
-        return $grid;
+    //     return $grid;
+    // }
+
+    public function index(Content $content){
+        $tree = new Tree(new ArticleType);
     }
 
     /**
