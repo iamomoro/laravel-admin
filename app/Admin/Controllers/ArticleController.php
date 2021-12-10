@@ -54,7 +54,15 @@ class ArticleController extends AdminController
     protected function form()
     {
         $form = new Form(new Article());
-
+        $form->text('tittle', __('Tittle'))->required();
+        $form->text('sub_tittle', __('Sub Tittle'));
+        $form->image('thumbnail');
+        $form->text('description', __('Content'))->required();
+        $states = [
+            'on'=>['value'=>1, 'text'=>'publish'],
+            'off'=>['value'=>0, 'text'=>'draft']
+         ];
+        $form->switch('released', __('Publish'))->states($states);
 
 
         return $form;
