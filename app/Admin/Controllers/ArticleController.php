@@ -31,6 +31,7 @@ class ArticleController extends AdminController
         $grid->article()->title('Article Title');
         $grid->column('sub_title', __("Sub Title"));
         $grid->column('description');
+        $grid->column('released', 'Released')->bool();
         $grid->column('thumbnail', __('Thumbnail'))->image('', '60', '60');
 
         return $grid;
