@@ -63,7 +63,7 @@ class ArticleController extends AdminController
         $form->select('type_id',__('Category'))->options((new ArticleType())::selectOptions());
         $form->text('title', __('Title'))->required();
         $form->text('sub_title', __('Sub Title'));
-        $form->image('thumbnail');
+        $form->image('thumbnail')->move('/programming');
         $form->text('description', __('Content'))->required();
         $states = [
             'on'=>['value'=>1, 'text'=>'publish'],
