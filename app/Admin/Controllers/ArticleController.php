@@ -59,7 +59,7 @@ class ArticleController extends AdminController
     protected function form()
     {
         $form = new Form(new Article());
-        $form->select('type_id')->options((new ArticleType())::selectOptions());
+        $form->select('type_id',__('Category'))->options((new ArticleType())::selectOptions());
         $form->text('title', __('Title'))->required();
         $form->text('sub_title', __('Sub Title'));
         $form->image('thumbnail');
