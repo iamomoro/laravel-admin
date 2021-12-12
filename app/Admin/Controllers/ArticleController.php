@@ -64,7 +64,7 @@ class ArticleController extends AdminController
         $form->text('title', __('Title'))->required();
         $form->text('sub_title', __('Sub Title'));
         $form->image('thumbnail')->move('/programming');
-        $form->text('description', __('Content'))->required();
+        $form->UEditor('description', __('Content'))->required();
         $states = [
             'on'=>['value'=>1, 'text'=>'publish'],
             'off'=>['value'=>0, 'text'=>'draft']
