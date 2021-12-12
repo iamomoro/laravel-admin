@@ -405,6 +405,16 @@ return [
     |
     */
     'extensions' => [
+        'ueditor' => [
+        // It should be true
+        'enable' => true,
+
+        // Go there for more info：http://fex.baidu.com/ueditor/#start-config
+        'config' => [
+            'initialFrameHeight' => 400, // the height
+        ],
+        // 'field_type' => 'Custom names'
+    ]
 
     ],
 ];
