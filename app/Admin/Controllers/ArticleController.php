@@ -35,7 +35,11 @@ class ArticleController extends AdminController
         });
         $grid->column('released', 'Released')->bool();
         $grid->column('thumbnail', __('Thumbnail'))->image('', '60', '60');
-
+        $grid->filter(function($filter){
+            $filter->disableIdFilter();
+            $filter->like('title');
+            $filter->like('article.title',__('Category'));
+        });
         return $grid;
     }
 
